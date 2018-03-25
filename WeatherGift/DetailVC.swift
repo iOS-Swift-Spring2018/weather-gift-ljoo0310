@@ -24,9 +24,7 @@ class DetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        locationLabel.text = locationsArray[currentPage].name
-        dateLabel.text = locationsArray[currentPage].coordinates
+        updateUserInterface()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +32,11 @@ class DetailVC: UIViewController {
         if currentPage == 0 { // only get current location when at page 0 do prevent battery drain
             getLocation()
         }
+    }
+    
+    func updateUserInterface() {
+        locationLabel.text = locationsArray[currentPage].name
+        dateLabel.text = locationsArray[currentPage].coordinates
     }
 }
 
@@ -65,10 +68,25 @@ extension DetailVC: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations.last
+        let geoCoder = CLGeocoder()
+        var place = ""
         let currentLatitude = currentLocation.coordinate.latitude
         let currentLongitude = currentLocation.coordinate.longitude
         let currentCoorindates = "\(currentLatitude),\(currentLongitude)"
         dateLabel.text = currentCoorindates
+        geoCoder.reverseGeocodeLocation(currentLocation, completionHandler: {
+            placemarks, error in
+            if placemarks != nil {
+                let placemark = placemarks?.last
+                place = (placemark?.name)!
+            } else {
+                print("Error retrieving place. Error code: \(error!)")
+                place = "Unknown Weather Location"
+            }
+            self.locationsArray[0].name = place
+            self.locationsArray[0].coordinates = currentCoorindates
+            self.updateUserInterface()
+        }) // to prevent the function from holding up the user from doing things
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
