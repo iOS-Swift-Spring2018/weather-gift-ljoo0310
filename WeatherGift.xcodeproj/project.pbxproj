@@ -18,6 +18,7 @@
 		7973CEF82058736700F733D0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEF72058736700F733D0 /* DetailVC.swift */; };
 		7973CEFA205879DE00F733D0 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEF9205879DE00F733D0 /* ListVC.swift */; };
 		7973CEFC20587B7100F733D0 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEFB20587B7100F733D0 /* PageVC.swift */; };
+		79D612D32073E073000B9126 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D612D22073E073000B9126 /* HourlyWeatherCell.swift */; };
 		DD788635F74808E91D0DDBAF /* Pods_WeatherGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3FB0A8CE33FB03B729CD9D /* Pods_WeatherGift.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		7973CEF72058736700F733D0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7973CEF9205879DE00F733D0 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		7973CEFB20587B7100F733D0 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		79D612D22073E073000B9126 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				7973CEFB20587B7100F733D0 /* PageVC.swift */,
 				7973CEF72058736700F733D0 /* DetailVC.swift */,
 				795A98342071BA300038D759 /* DayWeatherCell.swift */,
+				79D612D22073E073000B9126 /* HourlyWeatherCell.swift */,
 				795A98362071CD110038D759 /* TimeInterval+format.swift */,
 				7973CEF9205879DE00F733D0 /* ListVC.swift */,
 				7932D9DB20687DE0002E2201 /* Constants.swift */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				795A98352071BA300038D759 /* DayWeatherCell.swift in Sources */,
+				79D612D32073E073000B9126 /* HourlyWeatherCell.swift in Sources */,
 				794FFC492066EFBE00C39F64 /* WeatherLocation.swift in Sources */,
 				7973CEFA205879DE00F733D0 /* ListVC.swift in Sources */,
 				7973CEFC20587B7100F733D0 /* PageVC.swift in Sources */,
