@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7932D9DC20687DE0002E2201 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7932D9DB20687DE0002E2201 /* Constants.swift */; };
-		794FFC492066EFBE00C39F64 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794FFC482066EFBE00C39F64 /* WeatherLocation.swift */; };
+		794FFC492066EFBE00C39F64 /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794FFC482066EFBE00C39F64 /* WeatherDetail.swift */; };
 		795A98352071BA300038D759 /* DayWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A98342071BA300038D759 /* DayWeatherCell.swift */; };
 		795A98372071CD110038D759 /* TimeInterval+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A98362071CD110038D759 /* TimeInterval+format.swift */; };
 		7973CEE62058730200F733D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEE52058730200F733D0 /* AppDelegate.swift */; };
@@ -18,6 +18,7 @@
 		7973CEF82058736700F733D0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEF72058736700F733D0 /* DetailVC.swift */; };
 		7973CEFA205879DE00F733D0 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEF9205879DE00F733D0 /* ListVC.swift */; };
 		7973CEFC20587B7100F733D0 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973CEFB20587B7100F733D0 /* PageVC.swift */; };
+		79BA5AE9207575C900B13B5D /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BA5AE8207575C900B13B5D /* WeatherLocation.swift */; };
 		79D612D32073E073000B9126 /* HourlyWeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D612D22073E073000B9126 /* HourlyWeatherCell.swift */; };
 		DD788635F74808E91D0DDBAF /* Pods_WeatherGift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3FB0A8CE33FB03B729CD9D /* Pods_WeatherGift.framework */; };
 /* End PBXBuildFile section */
@@ -27,7 +28,7 @@
 		3F3FB0A8CE33FB03B729CD9D /* Pods_WeatherGift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherGift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		686449E901348CBF05F2743A /* Pods-WeatherGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherGift/Pods-WeatherGift.release.xcconfig"; sourceTree = "<group>"; };
 		7932D9DB20687DE0002E2201 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		794FFC482066EFBE00C39F64 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
+		794FFC482066EFBE00C39F64 /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		795A98342071BA300038D759 /* DayWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherCell.swift; sourceTree = "<group>"; };
 		795A98362071CD110038D759 /* TimeInterval+format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+format.swift"; sourceTree = "<group>"; };
 		7973CEE22058730200F733D0 /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +40,7 @@
 		7973CEF72058736700F733D0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		7973CEF9205879DE00F733D0 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		7973CEFB20587B7100F733D0 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		79BA5AE8207575C900B13B5D /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		79D612D22073E073000B9126 /* HourlyWeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,13 +86,14 @@
 			isa = PBXGroup;
 			children = (
 				7973CEE52058730200F733D0 /* AppDelegate.swift */,
-				794FFC482066EFBE00C39F64 /* WeatherLocation.swift */,
+				79BA5AE8207575C900B13B5D /* WeatherLocation.swift */,
+				794FFC482066EFBE00C39F64 /* WeatherDetail.swift */,
 				7973CEFB20587B7100F733D0 /* PageVC.swift */,
+				7973CEF9205879DE00F733D0 /* ListVC.swift */,
 				7973CEF72058736700F733D0 /* DetailVC.swift */,
 				795A98342071BA300038D759 /* DayWeatherCell.swift */,
 				79D612D22073E073000B9126 /* HourlyWeatherCell.swift */,
 				795A98362071CD110038D759 /* TimeInterval+format.swift */,
-				7973CEF9205879DE00F733D0 /* ListVC.swift */,
 				7932D9DB20687DE0002E2201 /* Constants.swift */,
 				7973CEE92058730200F733D0 /* Main.storyboard */,
 				7973CEEC2058730200F733D0 /* Assets.xcassets */,
@@ -139,7 +142,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Yehoon Joo";
 				TargetAttributes = {
 					7973CEE12058730200F733D0 = {
@@ -245,9 +248,10 @@
 			files = (
 				795A98352071BA300038D759 /* DayWeatherCell.swift in Sources */,
 				79D612D32073E073000B9126 /* HourlyWeatherCell.swift in Sources */,
-				794FFC492066EFBE00C39F64 /* WeatherLocation.swift in Sources */,
+				794FFC492066EFBE00C39F64 /* WeatherDetail.swift in Sources */,
 				7973CEFA205879DE00F733D0 /* ListVC.swift in Sources */,
 				7973CEFC20587B7100F733D0 /* PageVC.swift in Sources */,
+				79BA5AE9207575C900B13B5D /* WeatherLocation.swift in Sources */,
 				795A98372071CD110038D759 /* TimeInterval+format.swift in Sources */,
 				7973CEE62058730200F733D0 /* AppDelegate.swift in Sources */,
 				7973CEF82058736700F733D0 /* DetailVC.swift in Sources */,
@@ -291,6 +295,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -298,6 +303,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -348,6 +354,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -355,6 +362,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
