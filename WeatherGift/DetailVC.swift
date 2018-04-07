@@ -65,6 +65,13 @@ class DetailVC: UIViewController {
         collectionView.reloadData() // need to reload after updating cells
     }
 
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil) // "OK" is name of button
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 extension DetailVC: CLLocationManagerDelegate {
@@ -81,10 +88,29 @@ extension DetailVC: CLLocationManagerDelegate {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.requestLocation()
         case .denied:
-            print("I'm sorry - can't show location. User has not authorized it.")
+            showAlertToPrivacySettings(title: "User has not authorized location services", message: "Select 'Settings' below to open device settings and enable location services for this app.")
         case .restricted:
-            print("Access denied. Likely parental controls are restrict location services in this app.")
+            showAlert(title: "Location services denied", message: "It may be that parental controls are restricting location use in this app.")
         }
+    }
+    
+    func showAlertToPrivacySettings(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    
+        guard let settingsURL = URL(string: UIApplicationOpenSettingsURLString) else {
+            print("Something went wrong getting the UIApplicationOpenSettingsURLString")
+            return
+        }
+    
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) {
+            value in UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        } // "OK" is name of button
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil) // adding "Cancel" button
+        
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
